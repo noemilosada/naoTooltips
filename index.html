@@ -1,0 +1,105 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <title>Tootltips</title>
+
+        <!-- Demo purpose -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <link rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/atelier-lakeside-dark.min.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Needed for naoTooltips -->
+        <link rel="stylesheet" href="naoTooltips.css">
+    </head>
+
+    <body>
+        <div class="content">
+            <header>
+                <h1>Tooltips <span class="icon-bubble"></span></h1>
+                <hr />
+                <p>Tooltips made with jQuery and css.</p>
+            </header>
+
+            <h2 class="with-border">Demo</h2>
+
+            <div class="box">
+                <div class="naoTooltip-wrap">
+                    <span>Hover me! (right Tooltip)</span>
+                    <div class="naoTooltip nt-right nt-small">
+                        I'm an amazing tooltip! With a small size!
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="naoTooltip-wrap">
+                    <span>Hover me! (left Tooltip)</span>
+                    <div class="naoTooltip nt-left nt-large">
+                        I'm an amazing tooltip! With a large size and long content. My max width is 500px.
+                        I can display any kind of content. I will display my content in the left side.
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="naoTooltip-wrap">
+                    <span>Hover me! The tooltip will appear at the top</span>
+                    <div class="naoTooltip nt-top nt-medium">
+                        I'm an amazing tooltip! Medium size and I will appear at the top.
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="naoTooltip-wrap">
+                    <span>Hover me! The tooltip will appear at the bottom</span>
+                    <div class="naoTooltip nt-bottom nt-medium">
+                        I'm an amazing tooltip! Medium size and I will appear at the bottom.
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="with-border">Usage</h2>
+
+            <h3>HTML</h3>
+<pre class="prettyprint lang-html">
+    &lt;!-- Use the class `naoTooltip-wrap` to wrap all the content and tooltip inside --&gt;
+    &lt;div class="naoTooltip-wrap"&gt;
+
+        &lt;!-- Put your content in any kind of tag --&gt;
+        &lt;span&gt;Hover me! (right Tooltip)&lt;/span&gt;
+
+        &lt;!--
+            Use the class `naoTooltip` along with the classes `nt-right/nt-left/nt-top/nt-bottom`
+            depending where do you want to display your tooltip and the classes
+            `nt-small/nt-medium/nt-large` to set the desire size
+        --&gt;
+        &lt;div class="naoTooltip nt-right nt-small"&gt;
+            I'm an amazing tooltip! With a small size!
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+</pre>
+            <h3>JS</h3>
+<pre class="prettyprint lang-javascript">
+    /* Initialise all the tooltips using the wrapper class */
+    $('.naoTooltip-wrap').naoTooltip();
+
+    /* Or initialise customising the speed (by default is 400) */
+    $('.naoTooltip-wrap').naoTooltip({ speed: 200 });
+</pre>
+        <!-- Close content -->
+        </div>
+
+        <!-- Initialise the plugin -->
+        <script src="naoTooltips.js"></script>
+        <script>
+            (function() {
+                $('.naoTooltip-wrap').naoTooltip();
+            })();
+        </script>
+    </body>
+</html>

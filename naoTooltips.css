@@ -1,0 +1,108 @@
+/**
+ * Name: naoTooltips.css
+ * Author: Noemi Losada <info@noemilosada.com>
+ * Date: 09/07/2016
+ */
+
+.naoTooltip-wrap {
+  cursor: help;
+  display: inline-block;
+  position: relative;
+}
+
+/** Tooltip base
+================================================== */
+.naoTooltip:before {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+.naoTooltip {
+  background-color: #00cd99;
+  border-radius: 4px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  color: #111;
+  font-size: 13px;
+  opacity: 0;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  visibility: hidden;
+  width: 500px; /* Set the width to the largest option */
+  z-index: 999;
+}
+
+/** Tooltip position and arrows
+================================================== */
+/* Left */
+.naoTooltip.nt-left:before {
+  border-color: transparent transparent transparent #00cd99;
+  border-width: 8px 0 8px 8px;
+  right: -8px;
+  left: auto;
+  top: calc(50% - 8px);
+}
+
+.naoTooltip.nt-left {
+  margin: 0 16px 0 0;
+}
+
+/* Right */
+.naoTooltip.nt-right:before,
+.naoTooltip-wrap .naoTooltip.nt-left-to-right:before {
+  border-color: transparent #00cd99 transparent transparent;
+  border-width: 8px 8px 8px 0;
+  left: -8px;
+  right: auto;
+  top: calc(50% - 8px);
+}
+
+.naoTooltip.nt-right,
+.naoTooltip-wrap .naoTooltip.nt-left-to-right {
+  margin: 0 0 0 16px;
+}
+
+/* Top */
+.naoTooltip.nt-top:before {
+  border-color: #00cd99 transparent transparent transparent;
+  border-width: 8px 8px 0 8px;
+  bottom: -8px;
+  right: calc(50% - 8px);
+}
+
+.naoTooltip.nt-top {
+  margin: 0 0 16px 0;
+}
+
+/* Bottom */
+.naoTooltip.nt-bottom:before {
+  border-color: transparent transparent #00cd99 transparent;
+  border-width: 0 8px 8px 8px;
+  right: calc(50% - 8px);
+  top: -8px;
+}
+
+.naoTooltip.nt-bottom {
+  margin: 16px 0 0 0;
+}
+
+/** Tooltip sizes (small, medium, large)
+================================================== */
+/* Small */
+.naoTooltip.nt-small {
+  max-width: 125px;
+}
+
+/* Medium */
+.naoTooltip.nt-medium {
+  max-width: 300px;
+}
+
+/* Large */
+.naoTooltip.nt-large {
+  max-width: 500px;
+}

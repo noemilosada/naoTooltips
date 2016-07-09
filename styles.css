@@ -1,0 +1,123 @@
+/**
+ * Name: Styles.css
+ * Description: Styles used as a example content not related to the tooltips template.
+ * Author: Noemi Losada <info@noemilosada.com>
+ * Date: 02/07/2016
+ */
+
+/** General styles
+================================================== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.3em;
+  margin: 50px 20px;
+}
+
+pre.prettyprint {
+  border-radius: 4px;
+  margin: 0 0 50px 0;
+  overflow: auto;
+  padding: 30px 15px;
+  width: auto;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+hr {
+  border: 0;
+  border-color: #00cd99;
+  box-shadow: 0 1px 2px #00cd99;
+  height: 2px;
+  margin-bottom: 1rem;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.with-border {
+  border-bottom: 1px solid #999;
+  padding-bottom: 15px;
+  margin: 50px 0;
+  clear: both;
+  float: left;
+  width: 100%;
+}
+
+.content {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.icon-bubble:before {
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #00cd99;
+  border-top: 8px solid transparent;
+  content: '';
+  display: block;
+  height: 0;
+  left: -8px;
+  position: absolute;
+  top: calc(50% - 8px);
+  width: 0;
+}
+
+.icon-bubble:after {
+  color: #fff;
+  content: '=D';
+  font-size: .8rem;
+  left: 12px;
+  position: relative;
+  top: 7px;
+}
+
+.icon-bubble {
+  background-color: #00cd99;
+  border-radius: 4px;
+  display: inline-block;
+  height: 30px;
+  margin-left: 10px;
+  position: relative;
+  vertical-align: middle;
+  width: 40px;
+}
+
+/** Demo
+================================================== */
+.box {
+  float: left;
+  margin: 30px 0;
+  width: 50%;
+}
+
+/** Responsive content
+================================================== */
+@media (max-width: 1024px) {
+  .content {
+    width: 100%;
+  }
+
+  .box {
+    width: 100%;
+  }
+}
