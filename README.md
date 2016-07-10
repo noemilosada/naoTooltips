@@ -4,7 +4,7 @@
 
 Tooltips made with jQuery.  
 
-![naoTooltips](naoTooltips.jpg?raw=true "naoTooltips")
+![naoTooltips](https://raw.githubusercontent.com/noemilosada/naoTooltips/master/naoTooltip.jpg)
 
 **HTML Structure**
 
@@ -28,7 +28,7 @@ Tooltips made with jQuery.
 
 ```speed:``` 200 / 400 / 600 / 'slow' / 'fast'  
 This is the speed to hide and show the tooltip with the fade effect.  
-The default option is `400`.  
+The default option is 400.  
 
 **Classes**
 
