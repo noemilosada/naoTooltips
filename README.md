@@ -4,7 +4,7 @@
 
 > Tooltips made with jQuery.  
 
-![naoTooltips](https://raw.githubusercontent.com/noemilosada/naoTooltips/master/naoTooltip.jpg)
+![naoTooltips](https://raw.githubusercontent.com/noemilosada/naoTooltips/master/examples/naoTooltip.jpg)
 
 **HTML Structure**
 
