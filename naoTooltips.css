@@ -47,23 +47,13 @@
   top: calc(50% - 8px);
 }
 
-.naoTooltip.nt-left {
-  margin: 0 16px 0 0;
-}
-
 /* Right */
-.naoTooltip.nt-right:before,
-.naoTooltip-wrap .naoTooltip.nt-left-to-right:before {
+.naoTooltip.nt-right:before {
   border-color: transparent #00cd99 transparent transparent;
   border-width: 8px 8px 8px 0;
   left: -8px;
   right: auto;
   top: calc(50% - 8px);
-}
-
-.naoTooltip.nt-right,
-.naoTooltip-wrap .naoTooltip.nt-left-to-right {
-  margin: 0 0 0 16px;
 }
 
 /* Top */
@@ -74,20 +64,12 @@
   right: calc(50% - 8px);
 }
 
-.naoTooltip.nt-top {
-  margin: 0 0 16px 0;
-}
-
 /* Bottom */
 .naoTooltip.nt-bottom:before {
   border-color: transparent transparent #00cd99 transparent;
   border-width: 0 8px 8px 8px;
   right: calc(50% - 8px);
   top: -8px;
-}
-
-.naoTooltip.nt-bottom {
-  margin: 16px 0 0 0;
 }
 
 /** Tooltip sizes (small, medium, large)

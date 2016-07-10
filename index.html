@@ -18,11 +18,12 @@
     <body>
         <div class="content">
             <header>
-                <h1>Tooltips <span class="icon-bubble"></span></h1>
+                <h1>naoTooltips <span class="icon-bubble"></span></h1>
                 <hr />
                 <p>Tooltips made with jQuery and css.</p>
             </header>
 
+            <!-- Demo -->
             <h2 class="with-border">Demo</h2>
 
             <div class="box">
@@ -62,9 +63,22 @@
                 </div>
             </div>
 
-            <h2 class="with-border">Usage</h2>
+            <!-- Usage -->
+            <h2 class="with-border">Setup and usage</h2>
 
-            <h3>HTML</h3>
+            <h3>Setup</h3>
+<pre class="prettyprint lang-html">
+    &lt;!-- Include jQuery library --&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;
+
+    &lt;!-- Include `naoTooltips.css` --&gt;
+    <link rel="stylesheet" href="naoTooltips.css">
+
+    &lt;!-- Include `naoTooltips.js` plugin --&gt;
+    &lt;script src="naoTooltips.js"&gt;&lt;/script&gt;
+</pre>
+
+            <h3>HTML Structure</h3>
 <pre class="prettyprint lang-html">
     &lt;!-- Use the class `naoTooltip-wrap` to wrap all the content and tooltip inside --&gt;
     &lt;div class="naoTooltip-wrap"&gt;
@@ -83,14 +97,23 @@
 
     &lt;/div&gt;
 </pre>
-            <h3>JS</h3>
+            <h3>Plugin Usage</h3>
 <pre class="prettyprint lang-javascript">
+
     /* Initialise all the tooltips using the wrapper class */
     $('.naoTooltip-wrap').naoTooltip();
 
     /* Or initialise customising the speed (by default is 400) */
     $('.naoTooltip-wrap').naoTooltip({ speed: 200 });
 </pre>
+
+            <h3>Options</h3>
+            <p>
+                <span class="h-text">speed:</span> 200 / 400 / 600 / 'slow' / 'fast'<br />
+                This is the speed to hide and show the tooltip with the fade effect.<br />
+                The default option is `400`.
+            </p>
+
         <!-- Close content -->
         </div>
 

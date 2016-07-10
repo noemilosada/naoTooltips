@@ -74,19 +74,12 @@
         var tooltip = selector.find('.' + config.tooltip);
 
         // Set the initial tooltip position
-        // We need to set the left offset to get the proper height
-        // and be able to set the top offset
         setLeftOffset(selector, tooltip);
         setTopOffset(selector, tooltip);
-
 
         // Set again the position on resize
         $(window).resize(function() {
             setLeftOffset(selector, tooltip);
-            setTopOffset(selector, tooltip);
-        });
-
-        $(window).scroll(function() {
             setTopOffset(selector, tooltip);
         });
 
@@ -109,7 +102,7 @@
         var leftOffset = 'auto';
 
         if (tooltip.hasClass('nt-right')) {
-            leftOffset = selector.outerWidth();
+            leftOffset = selector.outerWidth() + config.arrowSize;
         }
 
         if (tooltip.hasClass('nt-left')) {
@@ -117,7 +110,7 @@
         }
 
         if (tooltip.hasClass('nt-top') || tooltip.hasClass('nt-bottom')) {
-            leftOffset = (selector.outerWidth() / 2) - (tooltip.outerWidth / 2)
+            leftOffset = (selector.outerWidth() / 2) - (tooltip.outerWidth / 2);
         }
 
         tooltip.css({
@@ -144,7 +137,7 @@
         }
 
         if (tooltip.hasClass('nt-bottom')) {
-            topOffset = selector.outerHeight();
+            topOffset = selector.outerHeight() + config.arrowSize;
         }
 
         tooltip.css({
