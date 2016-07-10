@@ -2,9 +2,9 @@
 =============================
 -----------------------------
 
-Tooltips made with jQuery.  
+> Tooltips made with jQuery.  
 
-![naoTooltips](naoTooltips.jpg?raw=true "naoTooltips")
+![naoTooltips](https://raw.githubusercontent.com/noemilosada/naoTooltips/master/naoTooltip.jpg)
 
 **HTML Structure**
 
@@ -28,20 +28,20 @@ Tooltips made with jQuery.
 
 ```speed:``` 200 / 400 / 600 / 'slow' / 'fast'  
 This is the speed to hide and show the tooltip with the fade effect.  
-The default option is `400`.  
+The default option is 400.  
 
 **Classes**
 
-```naoTooltip-wrap```  
+* _naoTooltip-wrap_  
 Contains the content to be hovered and the tooltip.  
 
-```naoTooltip```  
+* _naoTooltip_  
 Main class to specify the tooltip.  
 
-```nt-right / nt-left / nt-top / nt-bottom```  
+* _nt-right / nt-left / nt-top / nt-bottom_  
 Controls the position where the tooltip will be displayed.  
 Put at the same level as naoTooltip.  
 
-```nt-small / nt-medium / nt-large```  
+* _nt-small / nt-medium / nt-large_  
 Sets the size of the tooltip bubble.  
 Put at the same level as naoTooltip.
