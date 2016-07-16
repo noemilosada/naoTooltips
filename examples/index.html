@@ -72,7 +72,7 @@
     &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"&gt;&lt;/script&gt;
 
     &lt;!-- Include `naoTooltips.css` --&gt;
-    <link rel="stylesheet" href="naoTooltips.css">
+    &lt;link rel="stylesheet" href="naoTooltips.css"&gt;
 
     &lt;!-- Include `naoTooltips.js` plugin --&gt;
     &lt;script src="naoTooltips.js"&gt;&lt;/script&gt;
@@ -111,6 +111,12 @@
             <p>
                 <span class="h-text">speed:</span> 200 / 400 / 600 / 'slow' / 'fast'<br />
                 This is the speed to hide and show the tooltip with the fade effect.<br />
+                The default option is `400`.
+            </p>
+            <p>
+                <span class="h-text">delay:</span> { number }<br />
+                This is the delay applied to show the tooltip.<br />
+                If the mouse hover the `naoTooltip-wrap` for the specified delay then, the tooltip will show up.<br />
                 The default option is `400`.
             </p>
 

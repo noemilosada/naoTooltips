@@ -30,6 +30,11 @@
 This is the speed to hide and show the tooltip with the fade effect.  
 The default option is 400.  
 
+```delay:``` { number }  
+This is the delay applied to show the tooltip.  
+If the mouse hover the naoTooltip-wrap for the specified delay then, the tooltip will show up.  
+The default option is 400.  
+
 **Classes**
 
 * _naoTooltip-wrap_  

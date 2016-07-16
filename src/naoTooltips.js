@@ -14,7 +14,8 @@
      * @type {object}
      */
     var defaults = {
-        speed: 400
+        speed: 400,
+        delay: 400
     };
 
     /**
@@ -71,7 +72,9 @@
      * @return {void}
      */
     function animateNaoTooltip(selector, opts) {
-        var tooltip = selector.find('.' + config.tooltip);
+        var tooltip = selector.find('.' + config.tooltip),
+            delayHappened = false,
+            timer;
 
         // Set the initial tooltip position
         setLeftOffset(selector, tooltip);
@@ -83,11 +86,22 @@
             setTopOffset(selector, tooltip);
         });
 
-        // Show and hide the tooltip
-        selector.hover(function() {
-            showTooltip(tooltip, opts.speed);
-        }, function() {
+        // Hide tooltip
+        selector.on("mouseleave", function(e) {
+            delayHappened = false;
             hideTooltip(tooltip, opts.speed);
+        });
+
+        // Show tooltip and clear timer
+        selector.hover(function() {
+            if (delayHappened === false) {
+                timer = setTimeout(function() {
+                    delayHappened = true;
+                    showTooltip(tooltip, opts.speed);
+                }, opts.delay);
+            }
+        }, function() {
+            clearTimeout(timer);
         });
     }
 
