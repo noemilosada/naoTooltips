@@ -87,7 +87,7 @@
         });
 
         // Hide tooltip
-        selector.on("mouseleave", function(e) {
+        selector.on('mouseleave', function(e) {
             delayHappened = false;
             hideTooltip(tooltip, opts.speed);
         });
@@ -124,7 +124,7 @@
         }
 
         if (tooltip.hasClass('nt-top') || tooltip.hasClass('nt-bottom')) {
-            leftOffset = (selector.outerWidth() / 2) - (tooltip.outerWidth / 2);
+            leftOffset = (selector.outerWidth() / 2) - (tooltip.outerWidth() / 2);
         }
 
         tooltip.css({
