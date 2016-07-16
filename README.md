@@ -43,7 +43,7 @@ Contains the content to be hovered and the tooltip.
 * _naoTooltip_  
 Main class to specify the tooltip.  
 
-* _nt-right / nt-left / nt-top / nt-bottom_  
+* _nt-right / nt-left / nt-top / nt-bottom / nt-right-top / nt-right-bottom / nt-left-top / nt-left-bottom / nt-top-left / nt-top-right/ nt-bottom-left / nt-bottom-right_  
 Controls the position where the tooltip will be displayed.  
 Put at the same level as naoTooltip.  
 

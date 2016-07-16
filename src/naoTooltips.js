@@ -86,22 +86,19 @@
             setTopOffset(selector, tooltip);
         });
 
-        // Hide tooltip
-        selector.on('mouseleave', function(e) {
-            delayHappened = false;
-            hideTooltip(tooltip, opts.speed);
-        });
-
-        // Show tooltip and clear timer
-        selector.hover(function() {
+        // Show and hide tooltip
+        selector.on('mouseenter', function() {
             if (delayHappened === false) {
                 timer = setTimeout(function() {
                     delayHappened = true;
                     showTooltip(tooltip, opts.speed);
                 }, opts.delay);
             }
-        }, function() {
+        }).on('mouseleave', function() {
             clearTimeout(timer);
+
+            delayHappened = false;
+            hideTooltip(tooltip, opts.speed);
         });
     }
 
@@ -115,16 +112,24 @@
     function setLeftOffset(selector, tooltip) {
         var leftOffset = 'auto';
 
-        if (tooltip.hasClass('nt-right')) {
+        if (tooltip.hasClass('nt-right-top') || tooltip.hasClass('nt-right') || tooltip.hasClass('nt-right-bottom')) {
             leftOffset = selector.outerWidth() + config.arrowSize;
         }
 
-        if (tooltip.hasClass('nt-left')) {
+        if (tooltip.hasClass('nt-left-top') || tooltip.hasClass('nt-left') || tooltip.hasClass('nt-left-bottom')) {
             leftOffset = '-' + (tooltip.outerWidth() + config.arrowSize);
         }
 
         if (tooltip.hasClass('nt-top') || tooltip.hasClass('nt-bottom')) {
             leftOffset = (selector.outerWidth() / 2) - (tooltip.outerWidth() / 2);
+        }
+
+        if (tooltip.hasClass('nt-top-right') || tooltip.hasClass('nt-bottom-right')) {
+            leftOffset = selector.outerWidth() - tooltip.outerWidth();
+        }
+
+        if (tooltip.hasClass('nt-top-left') || tooltip.hasClass('nt-bottom-left')) {
+            leftOffset = 0;
         }
 
         tooltip.css({
@@ -142,16 +147,24 @@
     function setTopOffset(selector, tooltip) {
         var topOffset = 'auto';
 
+        if (tooltip.hasClass('nt-top-left') || tooltip.hasClass('nt-top') || tooltip.hasClass('nt-top-right')) {
+            topOffset = '-' + (selector.outerHeight() + tooltip.outerHeight());
+        }
+
+        if (tooltip.hasClass('nt-bottom-left') || tooltip.hasClass('nt-bottom') || tooltip.hasClass('nt-bottom-right')) {
+            topOffset = selector.outerHeight() + config.arrowSize;
+        }
+
         if (tooltip.hasClass('nt-right') || tooltip.hasClass('nt-left')) {
             topOffset = (selector.outerHeight() / 2) - (tooltip.outerHeight() / 2);
         }
 
-        if (tooltip.hasClass('nt-top')) {
-            topOffset = '-' + (selector.outerHeight() + tooltip.outerHeight());
+        if (tooltip.hasClass('nt-left-bottom') || tooltip.hasClass('nt-right-bottom')) {
+            topOffset = selector.outerHeight() - tooltip.outerHeight();
         }
 
-        if (tooltip.hasClass('nt-bottom')) {
-            topOffset = selector.outerHeight() + config.arrowSize;
+        if (tooltip.hasClass('nt-left-top') || tooltip.hasClass('nt-right-top')) {
+            topOffset = 0;
         }
 
         tooltip.css({

@@ -39,7 +39,9 @@
 /** Tooltip position and arrows
 ================================================== */
 /* Left */
-.naoTooltip.nt-left:before {
+.naoTooltip.nt-left-top:before,
+.naoTooltip.nt-left:before,
+.naoTooltip.nt-left-bottom:before {
   border-color: transparent transparent transparent #00cd99;
   border-width: 8px 0 8px 8px;
   right: -8px;
@@ -48,7 +50,9 @@
 }
 
 /* Right */
-.naoTooltip.nt-right:before {
+.naoTooltip.nt-right:before,
+.naoTooltip.nt-right-bottom:before,
+.naoTooltip.nt-right-top:before {
   border-color: transparent #00cd99 transparent transparent;
   border-width: 8px 8px 8px 0;
   left: -8px;
@@ -57,7 +61,9 @@
 }
 
 /* Top */
-.naoTooltip.nt-top:before {
+.naoTooltip.nt-top:before,
+.naoTooltip.nt-top-left:before,
+.naoTooltip.nt-top-right:before {
   border-color: #00cd99 transparent transparent transparent;
   border-width: 8px 8px 0 8px;
   bottom: -8px;
@@ -65,11 +71,34 @@
 }
 
 /* Bottom */
-.naoTooltip.nt-bottom:before {
+.naoTooltip.nt-bottom:before,
+.naoTooltip.nt-bottom-left:before,
+.naoTooltip.nt-bottom-right:before {
   border-color: transparent transparent #00cd99 transparent;
   border-width: 0 8px 8px 8px;
   right: calc(50% - 8px);
   top: -8px;
+}
+
+/* Combinations */
+.naoTooltip.nt-left-top:before,
+.naoTooltip.nt-right-top:before {
+  top: 8px;
+}
+
+.naoTooltip.nt-left-bottom:before,
+.naoTooltip.nt-right-bottom:before {
+  top: calc(100% - 24px);
+}
+
+.naoTooltip.nt-top-left:before,
+.naoTooltip.nt-bottom-left:before {
+  right: calc(100% - 24px);
+}
+
+.naoTooltip.nt-bottom-right:before,
+.naoTooltip.nt-top-right:before {
+  right: 8px;
 }
 
 /** Tooltip sizes (small, medium, large)
